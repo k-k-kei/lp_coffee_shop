@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>N coffee</title>
+  <link rel="icon" type="image/x-icon" href="img/ncoffee_logo.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- strollerを使用するために追加 -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Vue.jsを使うために追加 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+</head>
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<body>
+  <!-- この中に記述していく -->
+  <!-- ここから下にコードを書く -->
+
+  <div class="wrap">
+
+    <header id="header">
+      <div class="logo headline">
+        <h1>N coffee</h1>
+      </div>
+      <div class="fixed_bottom hashtext01 headline">
+        <p># コーヒーは果物</p>
+      </div>
+      <div class="fixed_left hashtext02 headline">
+        <p># ひとりひとりに合ったコーヒー</p>
+      </div>
+      <div class="nav">
+        <ul class="nav_list">
+          <li class="nav_list--menu"><a href="#about">concept</a></li>
+          <li class="nav_list--menu"><a href="#introduction">vision</a></li>
+          <li class="nav_list--menu"><a href="#news">work</a></li>
+          <li class="nav_list--menu"><a href="#contact">contact</a></li>      
+        </ul>
+      </div>
+    </header>
+
+  <!-- ファーストビュー -->
+    <section id="main">
+      <div class="firstview">
+        <div class="firstview_content">
+          <div class="firstview_image headline">
+            <img src="img/ncoffee_logo.png" alt="ロゴ">
+          </div>
+          <h1 class="doc_main headline">頑張る人に寄り添うコーヒーを</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ブランドイメージ紹介 -->
+    <section id="about">
+      <div class="inner concept_picture">
+        <div class="about_image">
+          <ul class="about_image--lists">
+            <li class="about_pic01"><img src="img/ncoffee04.png" alt="歩く人"></li>
+            <li class="about_pic02"><img src="img/ncoffee05.png" alt="焙煎機"></li>
+            <li class="about_pic03"><img src="img/ncoffee06.png" alt="ハンドドリップ"></li>
+          </ul>
+        </div>
+        <h1>
+          <span>なにげない日常</span>
+          <span>さりげない応援者</span>
+        </h1>
+        <p>人生そんなにドラマチックじゃない
+          <br>
+          日々を頑張ることでなにかを掴んでいける
+          <br>
+          私たちはそんな日々を過ごすあなたを応援します
+        </p>
+        <div class="more_info">
+          <a href="https://note.com/ncoffee">More info</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- N coffeeについて紹介 -->
+    <section id="introduction">
+      <div class="ourstory concept_picture">
+          <div class="ourstory_text">
+            <h3>頑張る人を応援したい</h3>
+            <p>
+              「頑張る人をコーヒーで応援したい」、私がN coffeeを立ち上げた理由です。
+              皆さんは日々の仕事や家事、勉強など懸命に人生を生きていますか？
+              仕事、家事、勉強、頑張る日々を支えるコーヒーをあなたに。
+              挑戦するあなたの背中をおす一杯を心を込めてお届けします。
+            </p>
+          </div>
+          <div class="ourstory_image">
+            <img src="img/owner.png" alt="オーナーの写真">
+          </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2 class="content_menu news_topic concept_picture">N coffeeの3つの取り組み</h2>
+
+      <div class="news_contents concept_picture">
+        <ul class="news_contents--lists">
+          <li class="news_contents--list">
+            <img src="img/value01.png" alt="焙煎機" class="news_pic">
+            <h3 class="news_datetime">
+              ひとつひとつ丁寧に自家焙煎したコーヒー豆・粉の販売
+            </h3>
+            <p class="news_doc">
+              コーヒーの持つ甘みや深みを引き出す焙煎を意識しています。
+              また、産地や煎り加減にとらわれすぎず、「土曜日の朝にのむコーヒー」や
+              「大切な人とのむコーヒー」など日常のシーンに合わせた味作りをおこなっています。
+            </p>
+            <div class="news_info">
+              <a href="https://plusalphacf.thebase.in/">オンラインショップ</a>
+            </div>
+          </li>
+          <li class="news_contents--list">
+            <img src="img/value02.png" alt="お店の写真" class="news_pic">
+            <h3 class="news_datetime">
+              「コーヒー × ○○」テーマを決めた間借りカフェの出店
+            </h3>
+            <p class="news_doc">
+              N coffeeは実店舗がありません。
+              そのため、お客様と直接触れ合える機会を作るために、間借りカフェを不定期開催しております。
+              その時々で出店テーマを変えるため何度でもお楽しみいただけます。
+            </p>
+            <div class="news_info">
+              <a href="https://www.instagram.com/keita_n_coffee/?hl=ja">instagramを見る</a>
+            </div>
+          </li>
+          <li class="news_contents--list">
+            <img src="img/value03.png" alt="4人の写真" class="news_pic">
+            <h3 class="news_datetime">
+              共同出店によるマーケティング、店舗設計、デザインのお手伝い
+            </h3>
+            <p class="news_doc">
+              コンセプトの「頑張る人を応援する」に共感いただける方であれば、
+              どなたでもN coffeeと共同出店をしていただけます。
+              その際は、マーケティングや店舗設計、デザインなど、私たちの持てる知識をご提供させていただきます。
+            </p>
+            <div class="news_info">
+              <a href="#contact">まずは相談してみる</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- difference 国ごとの特徴 -->
+    <section id="app">
+      <div class="app_wapper concept_picture">
+        <div class="app_content">
+          <h1>各国のコーヒーの違い</h1>
+        </div>
+
+        <div class="app_function">
+          <div class="app_function--change">
+            <div v-for="variant in variants" :key="variant.variantId">
+              <p @mouseover="updateProduct(variant.variantImage,variant.variantProduct,variant.variantDescription)">{{ variant.variantColor }}</p>
+            </div>
+          </div>
+
+        <div class="app_frame">
+          <div class="product_image">
+            <img v-bind:src="image" alt="各国の写真">
+          </div>
+
+          <div class="product_text">
+            <div class="product_info">
+              <h1>{{ product }}</h1>
+              <p>{{ description }}</p>
+            </div>
+          </div>
+        </div>
+
+          <button v-on:click="addToCart">Add to cart</button>
+          <div class="cart">
+            <p>Cart({{ cart }})</p>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+
+
+  <!-- Contact -->
+
+    <section id="contact">
+      <div class="contact_wrapper">
+        <div class="contents concept_picture">
+            <h2>お問い合わせ</h2>
+            <p>N coffeeについてご質問などあれば、こちらのフォームよりご連絡ください。</p>
+        </div>
+
+        <!-- コンタクトフォーム -->
+        <div class="form concept_picture">
+          <div class="form_table">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>名前</th>
+                  <td class="form_table--inputbox"><input type="text" name="name" size="60" value="" placeholder="珈琲太郎"></td>
+                </tr>
+
+                <tr>
+                  <th>カナ</th>
+                  <td class="form_table--inputbox"><input type="text" name="name-kana" size="60" value="" placeholder="コーヒータロウ"></td>
+                </tr>
+                
+                <tr>
+                  <th>メールアドレス</th>
+                  <td class="form_table--inputbox"><input type="text" name="email" size="60" value="" placeholder="coffee.taro@gmail.com"></td>
+                </tr>
+                
+                <tr>
+                  <th>お問い合わせ内容</th>
+                  <td class="form_table--inputbox"><textarea name="content" cols="30" rows="10" placeholder="ex) コーヒーの購入方法を知りたい。"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn">
+            <a href="#" class="btn_doc">送信</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p class="copyrights">copyrights 2021 N coffee All RIghts Reserved.</p>
+    </footer>
+
+      <!-- ここから上にコードを書く -->
+      <!-- この中に記述していく -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="js/main.js"></script>
+
+      <!-- strollerを使用するために追加 -->
+      <script type="text/javascript" src="skrollr.min.js"></script>
+      <script type="text/javascript">
+      var s = skrollr.init();
+      </script>
+  </div>
+</body>
+
+</html>
+
+<!-- 
+
+　 ,_＿＿　
+　 |_＿＿|
+　(´・ω・`) 
+　/　 ゞ  フォーム作成に苦戦。。。
+　しー-J   
+
+富士そばのアスキーアートから引用
+ -->
