@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-<!-- 最初の設定は終わっています　必要な方は触ってください -->
 
 <head>
   <meta charset="UTF-8">
@@ -41,12 +40,12 @@
           <li class="nav_list--menu"><a href="#about">concept</a></li>
           <li class="nav_list--menu"><a href="#introduction">vision</a></li>
           <li class="nav_list--menu"><a href="#news">work</a></li>
-          <li class="nav_list--menu"><a href="#contact">contact</a></li>      
+          <li class="nav_list--menu"><a href="#contact">contact</a></li>
         </ul>
       </div>
     </header>
 
-  <!-- ファーストビュー -->
+    <!-- ファーストビュー -->
     <section id="main">
       <div class="firstview">
         <div class="firstview_content">
@@ -87,18 +86,18 @@
     <!-- N coffeeについて紹介 -->
     <section id="introduction">
       <div class="ourstory concept_picture">
-          <div class="ourstory_text">
-            <h3>頑張る人を応援したい</h3>
-            <p>
-              「頑張る人をコーヒーで応援したい」、私がN coffeeを立ち上げた理由です。
-              皆さんは日々の仕事や家事、勉強など懸命に人生を生きていますか？
-              仕事、家事、勉強、頑張る日々を支えるコーヒーをあなたに。
-              挑戦するあなたの背中をおす一杯を心を込めてお届けします。
-            </p>
-          </div>
-          <div class="ourstory_image">
-            <img src="img/owner.png" alt="オーナーの写真">
-          </div>
+        <div class="ourstory_text">
+          <h3>頑張る人を応援したい</h3>
+          <p>
+            「頑張る人をコーヒーで応援したい」、私がN coffeeを立ち上げた理由です。
+            皆さんは日々の仕事や家事、勉強など懸命に人生を生きていますか？
+            仕事、家事、勉強、頑張る日々を支えるコーヒーをあなたに。
+            挑戦するあなたの背中をおす一杯を心を込めてお届けします。
+          </p>
+        </div>
+        <div class="ourstory_image">
+          <img src="img/owner.png" alt="オーナーの写真">
+        </div>
       </div>
     </section>
 
@@ -163,22 +162,23 @@
         <div class="app_function">
           <div class="app_function--change">
             <div v-for="variant in variants" :key="variant.variantId">
-              <p @mouseover="updateProduct(variant.variantImage,variant.variantProduct,variant.variantDescription)">{{ variant.variantColor }}</p>
+              <p @mouseover="updateProduct(variant.variantImage,variant.variantProduct,variant.variantDescription)">{{
+                variant.variantColor }}</p>
             </div>
           </div>
 
-        <div class="app_frame">
-          <div class="product_image">
-            <img v-bind:src="image" alt="各国の写真">
-          </div>
+          <div class="app_frame">
+            <div class="product_image">
+              <img v-bind:src="image" alt="各国の写真">
+            </div>
 
-          <div class="product_text">
-            <div class="product_info">
-              <h1>{{ product }}</h1>
-              <p>{{ description }}</p>
+            <div class="product_text">
+              <div class="product_info">
+                <h1>{{ product }}</h1>
+                <p>{{ description }}</p>
+              </div>
             </div>
           </div>
-        </div>
 
           <button v-on:click="addToCart">Add to cart</button>
           <div class="cart">
@@ -186,18 +186,18 @@
           </div>
 
         </div>
-        
+
       </div>
     </section>
 
 
-  <!-- Contact -->
+    <!-- Contact -->
 
     <section id="contact">
       <div class="contact_wrapper">
         <div class="contents concept_picture">
-            <h2>お問い合わせ</h2>
-            <p>N coffeeについてご質問などあれば、こちらのフォームよりご連絡ください。</p>
+          <h2>お問い合わせ</h2>
+          <p>N coffeeについてご質問などあれば、こちらのフォームよりご連絡ください。</p>
         </div>
 
         <!-- コンタクトフォーム -->
@@ -207,22 +207,26 @@
               <tbody>
                 <tr>
                   <th>名前</th>
-                  <td class="form_table--inputbox"><input type="text" name="name" size="60" value="" placeholder="珈琲太郎"></td>
+                  <td class="form_table--inputbox"><input type="text" name="name" size="60" value="" placeholder="珈琲太郎">
+                  </td>
                 </tr>
 
                 <tr>
                   <th>カナ</th>
-                  <td class="form_table--inputbox"><input type="text" name="name-kana" size="60" value="" placeholder="コーヒータロウ"></td>
+                  <td class="form_table--inputbox"><input type="text" name="name-kana" size="60" value=""
+                      placeholder="コーヒータロウ"></td>
                 </tr>
-                
+
                 <tr>
                   <th>メールアドレス</th>
-                  <td class="form_table--inputbox"><input type="text" name="email" size="60" value="" placeholder="coffee.taro@gmail.com"></td>
+                  <td class="form_table--inputbox"><input type="text" name="email" size="60" value=""
+                      placeholder="coffee.taro@gmail.com"></td>
                 </tr>
-                
+
                 <tr>
                   <th>お問い合わせ内容</th>
-                  <td class="form_table--inputbox"><textarea name="content" cols="30" rows="10" placeholder="ex) コーヒーの購入方法を知りたい。"></textarea></td>
+                  <td class="form_table--inputbox"><textarea name="content" cols="30" rows="10"
+                      placeholder="ex) コーヒーの購入方法を知りたい。"></textarea></td>
                 </tr>
               </tbody>
             </table>
@@ -238,16 +242,16 @@
       <p class="copyrights">copyrights 2021 N coffee All RIghts Reserved.</p>
     </footer>
 
-      <!-- ここから上にコードを書く -->
-      <!-- この中に記述していく -->
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script src="js/main.js"></script>
+    <!-- ここから上にコードを書く -->
+    <!-- この中に記述していく -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
 
-      <!-- strollerを使用するために追加 -->
-      <script type="text/javascript" src="skrollr.min.js"></script>
-      <script type="text/javascript">
+    <!-- strollerを使用するために追加 -->
+    <script type="text/javascript" src="skrollr.min.js"></script>
+    <script type="text/javascript">
       var s = skrollr.init();
-      </script>
+    </script>
   </div>
 </body>
 
