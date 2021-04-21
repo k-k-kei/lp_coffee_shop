@@ -10,7 +10,12 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/jquery.multiscroll.css">
+
+  <!-- slickを使用するために追加 -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <!-- プラネタリウム表示のために読み込み -->
+  <link rel="stylesheet" href="css/planetarium.css">
 
   <!-- strollerを使用するために追加 -->
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -93,6 +98,7 @@
       <div class="ourstory concept_picture">
         <div class="ourstory_text rellax slide-left" data-rellax-speed="1">
           <h3>頑張る人を応援したい</h3>
+          <div class="line_left"></div>
           <p>
             「頑張る人をコーヒーで応援したい」、私がN coffeeを立ち上げた理由です。
             皆さんは日々の仕事や家事、勉強など懸命に人生を生きていますか？
@@ -106,17 +112,29 @@
       </div>
     </section>
 
+    <section id="slide">
+      <div class="slide_contents">
+        <ul class="slide_contents--images slider">
+          <li><img src="/img/country01.png" alt=""></li>
+          <li><img src="img/country02.png" alt=""></li>
+          <li><img src="img/country03.png" alt=""></li>
+          <li><img src="img/country04.png" alt=""></li>
+          <li><img src="img/country05.png" alt=""></li>
+        </ul>
+      </div>
+    </section>
+
     <section id="news">
       <h2 class="content_menu news_topic concept_picture">N coffeeの3つの取り組み</h2>
 
       <div class="news_contents concept_picture">
         <ul class="news_contents--lists">
           <li class="news_contents--list">
-            <img src="img/value01.png" alt="焙煎機" class="news_pic">
-            <h3 class="news_datetime">
+            <img src="img/value01.png" alt="焙煎機" class="news_pic slide-left">
+            <h3 class="news_datetime slide-right">
               ひとつひとつ丁寧に自家焙煎したコーヒー豆・粉の販売
             </h3>
-            <p class="news_doc">
+            <p class="news_doc slide-left">
               コーヒーの持つ甘みや深みを引き出す焙煎を意識しています。
               また、産地や煎り加減にとらわれすぎず、「土曜日の朝にのむコーヒー」や
               「大切な人とのむコーヒー」など日常のシーンに合わせた味作りをおこなっています。
@@ -126,11 +144,11 @@
             </div>
           </li>
           <li class="news_contents--list">
-            <img src="img/value02.png" alt="お店の写真" class="news_pic">
-            <h3 class="news_datetime">
+            <img src="img/value02.png" alt="お店の写真" class="news_pic slide-left">
+            <h3 class="news_datetime slide-right">
               「コーヒー × ○○」テーマを決めた間借りカフェの出店
             </h3>
-            <p class="news_doc">
+            <p class="news_doc slide-left">
               N coffeeは実店舗がありません。
               そのため、お客様と直接触れ合える機会を作るために、間借りカフェを不定期開催しております。
               その時々で出店テーマを変えるため何度でもお楽しみいただけます。
@@ -140,11 +158,11 @@
             </div>
           </li>
           <li class="news_contents--list">
-            <img src="img/value03.png" alt="4人の写真" class="news_pic">
-            <h3 class="news_datetime">
+            <img src="img/value03.png" alt="4人の写真" class="news_pic slide-left">
+            <h3 class="news_datetime slide-right">
               共同出店によるマーケティング、店舗設計、デザインのお手伝い
             </h3>
-            <p class="news_doc">
+            <p class="news_doc slide-left">
               コンセプトの「頑張る人を応援する」に共感いただける方であれば、
               どなたでもN coffeeと共同出店をしていただけます。
               その際は、マーケティングや店舗設計、デザインなど、私たちの持てる知識をご提供させていただきます。
@@ -154,9 +172,6 @@
             </div>
           </li>
         </ul>
-        <div class="news_contents--images">
-
-        </div>
       </div>
     </section>
 
@@ -168,8 +183,8 @@
         </div>
 
         <div class="app_function">
-          <div class="app_function--change">
-            <div v-for="variant in variants" :key="variant.variantId">
+          <div class="app_function--change slide-left">
+            <div v-for="variant in variants" :key="variant.variantId" class="app_function--change-items">
               <p @mouseover="updateProduct(variant.variantImage,variant.variantProduct,variant.variantDescription)">{{
                 variant.variantColor }}</p>
             </div>
@@ -187,11 +202,13 @@
               </div>
             </div>
           </div>
-
-          <button v-on:click="addToCart">Add to cart</button>
+          <div class="earth_box">
+            <div class="earth planet earth_shape"></div>
+          </div>
+          <!-- <button v-on:click="addToCart">Add to cart</button>
           <div class="cart">
             <p>Cart({{ cart }})</p>
-          </div>
+          </div> -->
 
         </div>
 
@@ -255,6 +272,24 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
 
+    <!-- slickを使用するために追加 -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.slider').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          autoplay: false, //自動でスクロール
+          autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
+          speed: 5000, //スライドが流れる速度を設定
+          cssEase: "linear", //スライドの流れ方を等速に設定
+          pauseOnHover: true, //スライダーにマウスホバーした時にスライドを停止させるか
+          arrows: false
+        });
+      });
+    </script>
+
     <!-- strollerを使用するために追加 -->
     <script type="text/javascript" src="skrollr.min.js"></script>
     <script type="text/javascript">
@@ -292,6 +327,30 @@
       });
     </script>
 
+    <!-- lineクラスをつけた要素を左からフェードインさせる -->
+    <script>
+      $(function () {
+        $('.line_left').each(function () {
+          var $win = $(window),
+            $winH = $win.height(),
+            $connect = $(this),
+            position = $connect.offset().top,
+            current = 0,
+            scroll;
+          $win.on('load scroll', function () {
+            scroll = $win.scrollTop();
+            current = (1 - (position - scroll) / $winH) * 3 * 100;
+            if (current > 99.9) {
+              current = 100;
+            }
+            if (scroll > position - $winH) {
+              $connect.css({ width: current - 30 + '%' });
+            }
+          });
+        });
+      });
+    </script>
+
     <!-- テキストが入力されているかのように出てくる -->
     <script type="text/javascript" src="js/jquery.lettering.js"></script>
     <script src="js/jquery.textillate.js"></script>
@@ -323,6 +382,23 @@
         reverse: false
       });
     </script>
+
+    <script src="js/jquery.planetarium.js"></script>
+    <script>
+      $(".planet").planetarium({
+        autospin: "8000ms",                                  // You can define the speed of which your planet spin here. This option accepts the second or milliseconds in forms of "1s" and "1000ms" respectively. The default value is 1000ms.
+        angle: "20deg",                                      // You can define the degree in which your planet will be tilted. Make sure you end the value with deg. The default value is 20deg.
+        glow: "rgba(255, 255, 255, 0.34902) 0px 0px 50px, inset 33px 20px 50px rgba(0,0,0,0.5)", // You can define the glow and shadow of your planet here. This option accepts normal box-shadow styles. The default value is as shown. The first part, "rgba(255, 255, 255, 0.34902) 0px 0px 50px", is the glow effect and the second part, "inset 33px 20px 50px rgba(0,0,0,0.5)", is the shadow.
+        pattern: "img/texture-earth.jpg",                    // You can define your custom planet's pattern here. The option accepts image path. Equal size with the pattern-earth.jpg provided is recommended. The default value is "img/texture-earth.jpg".
+        size: "400x400",                                     // You can define the width and height of your planets here in a format of "(width)x(height)". The default value is 100x100.
+        float: true,                                         // You can toggle the floating animation here. Set it to false to disable it. The default value is true.
+        space: "body",                                       // You can define the container's selector to be used as the Space here. The default value is "body".
+        ring: false,                                         // You can toggle the ring of your planet here. To enable the ring, set this to true. The default value is false.
+        ringColor: "#fff",                                   // You can set the ring's color here. The option accepts HEX color code. The default value is "#fff".
+        ringAngle: "20deg"                                   // You can define the angle of the ring here. Make sure you end the value with deg like this: "180deg". The default option is "20deg".
+      });
+    </script>
+
     <!-- jsコードはここまで -->
   </div>
 </body>
