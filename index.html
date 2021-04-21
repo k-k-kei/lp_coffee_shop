@@ -9,7 +9,8 @@
   <link rel="icon" type="image/x-icon" href="img/ncoffee_logo.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/jquery.multiscroll.css">
 
   <!-- strollerを使用するために追加 -->
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -17,7 +18,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
 </head>
-<!-- 最初の設定は終わっています　必要な方は触ってください -->
 
 <body>
   <!-- この中に記述していく -->
@@ -25,60 +25,65 @@
 
   <div class="wrap">
 
-    <header id="header">
-      <div class="logo headline">
-        <h1>N coffee</h1>
-      </div>
-      <div class="fixed_bottom hashtext01 headline">
-        <p># コーヒーは果物</p>
-      </div>
-      <div class="fixed_left hashtext02 headline">
-        <p># ひとりひとりに合ったコーヒー</p>
-      </div>
-      <div class="nav">
-        <ul class="nav_list">
-          <li class="nav_list--menu"><a href="#about">concept</a></li>
-          <li class="nav_list--menu"><a href="#introduction">vision</a></li>
-          <li class="nav_list--menu"><a href="#news">work</a></li>
-          <li class="nav_list--menu"><a href="#contact">contact</a></li>
-        </ul>
-      </div>
-    </header>
-
-    <!-- ファーストビュー -->
-    <section id="main">
-      <div class="firstview">
-        <div class="firstview_content">
-          <div class="firstview_image headline">
-            <img src="img/ncoffee_logo.png" alt="ロゴ">
-          </div>
-          <h1 class="doc_main headline">頑張る人に寄り添うコーヒーを</h1>
+    <div class="top">
+      <header id="header">
+        <div class="logo headline">
+          <h1>N coffee</h1>
         </div>
-      </div>
-    </section>
+        <div class="fixed_bottom hashtext01 headline">
+          <p># コーヒーは果物</p>
+        </div>
+        <div class="fixed_left hashtext02 headline">
+          <p># ひとりひとりに合ったコーヒー</p>
+        </div>
+        <div class="nav">
+          <ul class="nav_list">
+            <li class="nav_list--menu"><a href="#about">concept</a></li>
+            <li class="nav_list--menu"><a href="#introduction">vision</a></li>
+            <li class="nav_list--menu"><a href="#news">work</a></li>
+            <li class="nav_list--menu"><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- ファーストビュー -->
+      <section id="main">
+        <div class="firstview">
+          <div class="firstview_content">
+            <div class="firstview_movie">
+              <video id="bg-video" src="video/firstview_movie03.mp4" poster="img/background.png" autoplay loop
+                muted></video>
+            </div>
+            <div class="firstview_image headline">
+              <img src="img/ncoffee_logo.png" alt="ロゴ">
+            </div>
+            <div class="firstview_text">
+              <h1 class="doc_main static_ef">頑張る人に寄り添うコーヒーを</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- ブランドイメージ紹介 -->
     <section id="about">
       <div class="inner concept_picture">
-        <div class="about_image">
-          <ul class="about_image--lists">
-            <li class="about_pic01"><img src="img/ncoffee04.png" alt="歩く人"></li>
-            <li class="about_pic02"><img src="img/ncoffee05.png" alt="焙煎機"></li>
-            <li class="about_pic03"><img src="img/ncoffee06.png" alt="ハンドドリップ"></li>
-          </ul>
+        <div class="about_image rellax slide-left" data-rellax-speed="2">
+          <img src="img/ncoffee04.png" alt="歩く人">
         </div>
-        <h1>
-          <span>なにげない日常</span>
-          <span>さりげない応援者</span>
-        </h1>
-        <p>人生そんなにドラマチックじゃない
-          <br>
-          日々を頑張ることでなにかを掴んでいける
-          <br>
-          私たちはそんな日々を過ごすあなたを応援します
-        </p>
-        <div class="more_info">
-          <a href="https://note.com/ncoffee">More info</a>
+        <div class="about_text rellax" data-rellax-speed="1">
+          <h1>
+            <span class="ef">なにげない日常</span>
+            <span class="ef">さりげない応援者</span>
+            <div class="line"></div>
+          </h1>
+          <p class="ef_late">人生そんなにドラマチックじゃない
+          <p class="ef_late">日々を頑張ることでなにかを掴んでいける</p>
+          <p class="ef_late">私たちはそんな日々を過ごすあなたを応援します</p>
+          </p>
+          <div class="more_info rellax" data-rellax-speed="0">
+            <a href="https://note.com/ncoffee" class="ef_late">More info</a>
+          </div>
         </div>
       </div>
     </section>
@@ -86,7 +91,7 @@
     <!-- N coffeeについて紹介 -->
     <section id="introduction">
       <div class="ourstory concept_picture">
-        <div class="ourstory_text">
+        <div class="ourstory_text rellax slide-left" data-rellax-speed="1">
           <h3>頑張る人を応援したい</h3>
           <p>
             「頑張る人をコーヒーで応援したい」、私がN coffeeを立ち上げた理由です。
@@ -95,7 +100,7 @@
             挑戦するあなたの背中をおす一杯を心を込めてお届けします。
           </p>
         </div>
-        <div class="ourstory_image">
+        <div class="ourstory_image rellax slide-right" data-rellax-speed="1">
           <img src="img/owner.png" alt="オーナーの写真">
         </div>
       </div>
@@ -149,6 +154,9 @@
             </div>
           </li>
         </ul>
+        <div class="news_contents--images">
+
+        </div>
       </div>
     </section>
 
@@ -252,6 +260,70 @@
     <script type="text/javascript">
       var s = skrollr.init();
     </script>
+
+    <!-- Relax.jsを使用するために追加 -->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      // Accepts any class name
+      var rellax = new Rellax('.rellax');
+    </script>
+
+    <!-- lineクラスをつけた要素を右からフェードインさせる -->
+    <script>
+      $(function () {
+        $('.line').each(function () {
+          var $win = $(window),
+            $winH = $win.height(),
+            $connect = $(this),
+            position = $connect.offset().top,
+            current = 0,
+            scroll;
+          $win.on('load scroll', function () {
+            scroll = $win.scrollTop();
+            current = (1 - (position - scroll) / $winH) * 3 * 100;
+            if (current > 99.9) {
+              current = 100;
+            }
+            if (scroll > position - $winH) {
+              $connect.css({ width: current + '%' });
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- テキストが入力されているかのように出てくる -->
+    <script type="text/javascript" src="js/jquery.lettering.js"></script>
+    <script src="js/jquery.textillate.js"></script>
+    <script>
+      // スクロールしたら発火して文字が現れる
+      $(window).on('scroll', function () {
+        $('.ef').css('opacity', 1).textillate({
+          minDisplayTime: 3000,
+          initialDelay: 200
+        });
+      });
+      // スクロールしたら発火して文字が現れる（表示遅め）
+      $(window).on('scroll', function () {
+        $('.ef_late').css('opacity', 1).textillate({
+          minDisplayTime: 3000,
+          initialDelay: 300
+        });
+      });
+      // ページ読み込みと同時に文字が現れる
+      $('.static_ef').css('opacity', 1).textillate({
+        minDisplayTime: 3000,
+      });
+    </script>
+
+    <!-- スクロールに合わせてフォードイン・アウトする -->
+    <script src="js/jquery.fadethis.min.js"></script>
+    <script>
+      $(window).fadeThis({
+        reverse: false
+      });
+    </script>
+    <!-- jsコードはここまで -->
   </div>
 </body>
 
