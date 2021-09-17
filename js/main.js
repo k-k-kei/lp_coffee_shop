@@ -44,10 +44,10 @@ var app_frame = new Vue({
         cart: 0
     },
     methods: {
-        addToCart: function(){
+        addToCart: function () {
             this.cart += 1
         },
-        updateProduct: function(variantImage, variantProduct, variantDescription){
+        updateProduct: function (variantImage, variantProduct, variantDescription) {
             this.image = variantImage
             this.product = variantProduct
             this.description = variantDescription
@@ -55,15 +55,17 @@ var app_frame = new Vue({
     }
 })
 
+// ふわっと現れるアニメーション
 ScrollReveal().reveal('.headline', {
     duration: 2000
 });
 
-ScrollReveal().reveal('.concept_picture', {
-    duration: 1000,
-    delay: 50,
-    duration: 1600,
-    origin: 'bottom',
-    distance: '50px',
-    reset: true
-}); 
+// 上に上がりながらふわっと現れるアニメーション
+// ScrollReveal().reveal('.concept_picture', {
+//     duration: 1000,
+//     delay: 50,
+//     duration: 1600,
+//     origin: 'bottom',
+//     distance: '50px',
+//     reset: true
+// }); 
